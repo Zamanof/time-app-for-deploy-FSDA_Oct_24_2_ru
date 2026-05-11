@@ -6,9 +6,9 @@ services:
     restart: always
     ports:
       - '3000:3000'
-    volumes:
-      - /app/node_modules
-      - ./frontend:/app
+    # volumes:
+    #   - /app/node_modules
+    #   - ./frontend:/app
     
   api:
     build: ./api
@@ -21,9 +21,9 @@ services:
       MYSQL_PORT: '3306'
       MYSQL_PASSWORD: password
       MYSQL_DB: time_db
-    volumes:
-      - /app/node_modules
-      - ./api:/app
+    # volumes:
+    #   - /app/node_modules
+    #   - ./api:/app
 
   mysql:
     image: mysql
